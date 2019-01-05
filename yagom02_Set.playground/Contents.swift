@@ -2,7 +2,7 @@ import Foundation
 
 //Set
 //배열과 마찬가지로 대괄호를 사용하여 세트 안의 값 설정
-var names: Set<String> = ["yagom","chulsoo","younghee","yagom"]
+var names: Set<String> = ["yagom", "chulsoo", "younghee", "yagom"]
 
 //배열과 마찬가지의 값 설정을 하였기 때문에, 타입 추론을 사용하게 되면 컴파일러는 Set가 아닌 Array로 타입을 지정.
 
@@ -13,8 +13,8 @@ print(names.isEmpty)
 print(names.count)
 
 //집합의 연산을 통한 세트의 활용.
-let englishClassStudents: Set<String> = ["John","chulsoo","yagom"]
-let koreanClassStudents: Set<String> = ["jenny","yagom","chulsoo","hana","minsoo"]
+let englishClassStudents: Set<String> = ["John", "chulsoo", "yagom"]
+let koreanClassStudents: Set<String> = ["jenny", "yagom", "chulsoo", "hana", "minsoo"]
 
 //교집합.
 let intersetSet: Set<String> = englishClassStudents.intersection(koreanClassStudents)
@@ -31,8 +31,8 @@ let subtractSet: Set<String> = englishClassStudents.subtracting(koreanClassStude
 
 print(unionSet.sorted())
 
-let 새: Set<String> = ["비둘기","닭","기러기"]
-let 포유류: Set<String> = ["사자","호랑이","곰"]
+let 새: Set<String> = ["비둘기", "닭", "기러기"]
+let 포유류: Set<String> = ["사자", "호랑이", "곰"]
 let 동물: Set<String>  = 새.union(포유류)
 
 print(새.isDisjoint(with: 포유류)) // 서로 배타적인 관계인지.
@@ -119,7 +119,7 @@ enum ArithmeticExpression {
 //순환 열거형의 사용
 let five = ArithmeticExpression.number(5)
 let four = ArithmeticExpression.number(4)
-let sum = ArithmeticExpression.addition(five,four)
+let sum = ArithmeticExpression.addition(five, four)
 let final = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))
 
 func evaluate(_ expression: ArithmeticExpression)-> Int{
